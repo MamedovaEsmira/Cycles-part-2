@@ -99,10 +99,10 @@ public class Main {
         // сумму его накоплений за следующие каждые полгода в течение 9 лет.
         int moneyVasiliy = 15000;
         int years = 9;
-        for (int a = 1; i <= years * 12; i++) {
+        for (int a = 0; a <= years * 12; a++) {
             moneyVasiliy = moneyVasiliy + moneyVasiliy / 100 * 7;
-            if (i % 6 == 0) {
-                System.out.println("Месяц " + i + " сумма накоплений составляет" + moneyVasiliy);
+            if (a % 6 == 0) {
+                System.out.println("Месяц " + a + " сумма накоплений составляет" + moneyVasiliy);
             }
         }
         System.out.println("Задача2.4");
@@ -113,8 +113,8 @@ public class Main {
         //  В нашем месяце 31 день.
         // В результате у вас должно вывестись от 4 до 5 сообщений
         // с напоминаниями по разным датам.
-        int fridayNumber = 5;
-        for (; fridayNumber <= 31; fridayNumber += 7) {
+
+        for (int fridayNumber = 5; fridayNumber <= 31; fridayNumber += 7) {
             System.out.println("Сегодня пятница," + fridayNumber + "-е число. Необходимо подготовить отчет.");
         }
         System.out.println("Задача2.5");
@@ -134,26 +134,30 @@ public class Main {
 //1896
 //1975
 //2054
-
-        int year = 2022;
-        for (int years1 = 1896; years1 <= 2054; years1 += 79) {
-            System.out.println(years1);
+        int year1 = 2022;
+        int yearStart=year1-200;
+        int yearFinish = year1+100;
+        for (int year=yearStart;year < yearFinish; ++year) {
+            if (year % 79 == 0) {
+                System.out.println(year);
+            }
         }
-        System.out.println("Задача2.6");
-        // Напишите программу, которая выводит в консоль таблицу умножения на 2:
-        // 2*1=2
-        // 2*2=4
-        // 2*3=6
-        // 2*4=8
-        // 2*5=10
-        // 2*6=12
-        // 2*7=14
-        // 2*8=16
-        // 2*9=18
-        // 2*10=20
-        int number;
-        for ( number=1; number <= 10; number ++) {
-            System.out.println( "2*"+number+"="+2*number);
+            System.out.println("Задача2.6");
+            // Напишите программу, которая выводит в консоль таблицу умножения на 2:
+            // 2*1=2
+            // 2*2=4
+            // 2*3=6
+            // 2*4=8
+            // 2*5=10
+            // 2*6=12
+            // 2*7=14
+            // 2*8=16
+            // 2*9=18
+            // 2*10=20
+
+            for (int number = 1; number <= 10; number++) {
+                System.out.println("2*" + number + "=" + 2 * number);
+            }
+            System.out.println();
         }
     }
-}
